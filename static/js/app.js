@@ -123,7 +123,7 @@ function optionChanged(selectedID){
  
  // BONUS: GAUGE CHART
 
- // Gauge Chart to plot weekly washing frequency 
+ 
  const guageDisplay = d3.select("#gauge");
  guageDisplay.html(""); 
  const washFreq = idMetadata[0].wfreq;
@@ -132,22 +132,22 @@ function optionChanged(selectedID){
     {
       domain: { x: [0, 1], y: [0, 1] },
       value: washFreq,
-      title: { text: "<b>Belly Button Washing Frequency </b><br> (Scrubs Per Week)" },
+      title: { text: "<b>Belly Button Washing Frequency</b> <br>Scrubs Per Week</br>" },
       type: "indicator",
       mode: "gauge+number",     
        gauge: {
        axis: { range: [0,9] },
        bar: { color: "#f2e9e4" },
        steps: [
-          { range: [0, 1], color: "#e5d5d0" },
-          { range: [1, 2], color: "#dbc7c2" },
-          { range: [2, 3], color: "#d2b9b4" },
-          { range: [3, 4], color: "#c9ada7" },
-          { range: [4, 5], color: "#ac9899" },
-          { range: [5, 6], color: "#8a7e88" },
-          { range: [6, 7], color: "#7d7482" },
-          { range: [7, 8], color: "#706a7b" },
-          { range: [8, 9], color: "#4a4e69" }
+         { range: [0, 1], color: "rgb(248, 243, 236)" },
+         { range: [1, 2], color: "rgb(239, 234, 220)" },
+         { range: [2, 3], color: "rgb(230, 225, 205)" },
+         { range: [3, 4], color: "rgb(218, 217, 190)" },
+         { range: [4, 5], color: "rgb(204, 209, 176)" },
+         { range: [5, 6], color: "rgb(189, 202, 164)" },
+         { range: [6, 7], color: "rgb(172, 195, 153)" },
+         { range: [7, 8], color: "rgb(153, 188, 144)" },
+         { range: [8, 9], color: "rgb(132, 181, 137)" },
                 
         ],
        threshold: {
@@ -156,9 +156,9 @@ function optionChanged(selectedID){
       }
     }
   ]; 
-  const gaugeLayout = {  width: 600, 
+  const gaugeLayout = {  width: 500, 
                    height: 400, 
-                   margin: { t: 0, b: 0 }, 
+                   margin: { t: 50, r: 25, l: 25, b: 25 }, 
                     };
  
  // Plot using Plotly
