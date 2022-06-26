@@ -76,7 +76,7 @@ function optionChanged(selectedID){
        orientation: "h",
        text:  otuLabels,
        marker: {
-          color: 'rgb(154, 140, 152)',
+          color: 'rgb(0, 191, 255)',
           line: {
              width: 3
          }
