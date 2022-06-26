@@ -1,18 +1,14 @@
 // Function for change on dropdown menu
 function optionChanged(selectedID){
 
-    // Check if value is selected in dropdown
     console.log(selectedID);
  
-    // Read the json file for the data
     d3.json("data/samples.json").then((data) => {
  
-   //  console.log(data);
  
-    // Clears dropdown
     d3.select("#selDataset").html("");   
     
-    // Select the metadata array and for each item append the item ID and adds ID to dropdown
+    
     data.metadata.forEach(item =>
          {
           // console.log(item.id);
@@ -23,13 +19,7 @@ function optionChanged(selectedID){
     
     // Filter Metadata for selected ID from dropdown
     const idMetadata = data.metadata.filter(item=> (item.id == selectedID));
-       // {
-       //    console.log("------------------------")
-       //    console.log(item);
-       //    console.log(item.id);
-          
-       // });
-    // Check the metadata loaded for the selected ID
+      
     console.log(idMetadata);
     
     const panelDisplay = d3.select("#sample-metadata");
@@ -40,16 +30,12 @@ function optionChanged(selectedID){
           panelDisplay.append("p").text(`${item[0]}: ${item[1]}`)
        });
  
-    // BAR CHART
+    // HORIZONTAL BAR CHART
  
     // Filter sample array data for the selected ID
     const idSample = data.samples.filter(item => parseInt(item.id) == selectedID);
     
-    // // Check values
-    // console.log(typeof parseInt(item.id));
-    // console.log(idSample[0].sample_values);  
-    // console.log(idSample[0].otu_ids);  
-    // console.log(idSample[0].otu_labels);  
+    
     
     // Slice top 10 sample values
     var sampleValue = idSample[0].sample_values.slice(0,10);
@@ -59,10 +45,7 @@ function optionChanged(selectedID){
     var otuLabels = idSample[0].otu_labels
     otuLabels = otuLabels.reverse();
  
-    // // Check values
-    //  console.log(sampleValue);
-    //  console.log(otuID);
-    //  console.log(otuLabels);
+    
  
     // Y axis of bar chart
     const yAxis = otuID.map(item => 'OTU' + " " + item);
@@ -93,7 +76,7 @@ function optionChanged(selectedID){
        
  // BUBBLE CHART
  
- // Remove Sample value and otuID from individual
+ 
  var sampleValue1 =idSample[0].sample_values;
  var otuID1= idSample[0].otu_ids;
  
