@@ -83,8 +83,8 @@ function optionChanged(selectedID){
         }
        },
        layout = {
-       title: 'Top 10 Operational Taxonomic Units (OTU)/Individual',
-       xaxis: {title: 'Number of Samples Collected'},
+       title: 'Top 10 OTUs found',
+       xaxis: {title: 'Sample values'},
        yaxis: {title: 'OTU ID'}
        };
  
@@ -115,7 +115,7 @@ function optionChanged(selectedID){
     yaxis: {title: 'Number of Samples Collected'},
     showlegend: false,
     height: 800,
-    width: 1800
+    width: 1200
     };
     
  // Plot using Plotly
