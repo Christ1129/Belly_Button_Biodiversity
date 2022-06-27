@@ -4,6 +4,7 @@ GitHub Page Link: https://christ1129.github.io/Belly_Button_Biodiversity/
 This page is created to visualize [Belly Button Biodiversity dataset](http://robdunnlab.com/projects/belly-button-biodiversity/) using JavaScript Data Binding.
 
  Belly_Button_Biodiversity.png  
+ <img width="445" alt="Belly_Button_Biodiversity" src="https://user-images.githubusercontent.com/100292828/175839680-1ffab75e-bc98-4306-b0c1-010820993ba1.png">
 
 The webpage uses the D3 library to read `samples.json` data.
 The charts displayed in this page are:
