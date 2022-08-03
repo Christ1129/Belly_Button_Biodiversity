@@ -15,10 +15,8 @@ The charts displayed in this page are:
 Sources for creating the page:
 The Belly Button Biodiversity dataset can be found at: http://robdunnlab.com/projects/belly-button-biodiversity/
 
+<hr>
 Contact : 
 
-•	Christian Tourteau
-
-tourteau.christian@gmail.com
-
-https://github.com/Christ1129
+* tourteau.christian@gmail.com
+* https://www.linkedin.com/in/christian-tourteau/
